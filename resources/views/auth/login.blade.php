@@ -3,11 +3,11 @@
 @section('content')
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <h1 class="text-center" style="color: white">LaraQuiz</h1>
-            <h3 class="text-center" style="color: white">How well do you know Laravel?</h3>
+            <h1 class="text-center" style="color: white">{{ config('app.name','Dang Quoc Dung') }}</h1>
+            <h3 class="text-center" style="color: white">Tác giả: Đặng Quốc Dũng </h3>
             <br />
             <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+                <div class="panel-heading">Đăng nhập </div>
                 <div class="panel-body">
                     @if (count($errors) > 0)
                         <div class="alert alert-danger">
@@ -54,7 +54,7 @@
                             <div class="col-md-6 col-md-offset-4">
                                 <label>
                                     <input type="checkbox"
-                                           name="remember">Remember me
+                                           name="remember">&nbsp;Remember me
                                 </label>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                                 </a>
                                 <br>
                                 <a href="{{ route('auth.password.reset') }}">Forgot password</a>
-                                <br>
+                                {{--  <br>
                                 <br>
                                 Or login with:
                                 <br>
@@ -86,14 +86,14 @@
                                 <a href="{{ route('oauth2github') }}"
                                         class="btn btn-info">
                                     GitHub
-                                </a>
+                                </a>  --}}
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="text-center" style="color: white">Created by <a href="http://laraveldaily.com">Laravel Daily Team</a></div>
-            <div class="text-center" style="color: white">Powered by <a href="https://quickadminpanel.com">QuickAdminPanel.com</a></div>
+            <div class="text-center" style="color: white">Created by <a href="http://dangquocdung.com">Đặng Quốc Dũng</a> &copy; 2018</div>
+            <div class="text-center" style="color: white">Powered by <a href="https://dungthinh.com">dungthinh.com</a></div>
         </div>
     </div>
 @endsection
